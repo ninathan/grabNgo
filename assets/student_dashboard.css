@@ -1,0 +1,224 @@
+/* General Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #4E41FB 0%, #EABE6C 100%);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Optional: Style for the toggle button */
+.dark-mode-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+}
+
+body.dark-mode .dark-mode-btn {
+    color: #ffffff;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h2 {
+    margin: 0;
+    color: white;
+    font-weight: 600;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Dashboard Container */
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 0px auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    text-align: center;
+}
+
+.container h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Stalls Grid */
+.stalls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.stall-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.stall-card:hover {
+    transform: translateY(-5px);
+}
+
+.stall-card h4 {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #4E41FB;
+}
+
+/* View Menu Button */
+.menu-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #4E41FB 0%, #EABE6C 100%);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.menu-btn:hover {
+    background: linear-gradient(135deg, #EABE6C 0%, #4E41FB 100%);
+    transform: scale(1.05);
+}
+
+.popular-items-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 30px auto;
+    width: 80%;
+}
+
+.popular-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.popular-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.popular-item:hover {
+    transform: translateY(-5px);
+}
+
+.popular-item h4 {
+    color: #4E41FB;
+    font-weight: bold;
+}
+
+.popular-item p {
+    color: #333;
+}
+
+.popular-items-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.popular-items-section h3 {
+    color: #4E41FB;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 600;
+
+}
+
+.popular-items-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.popular-item-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.popular-item-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.popular-item-card h4 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.popular-item-card p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+}
+
+.popular-item-card:hover {
+    transform: translateY(-5px);
+}

@@ -1,0 +1,224 @@
+/* Student Signup Page Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #4E41FB 0%, #EABE6C 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+/* Signup Container */
+.signup-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 60px;
+    width: 380px;
+    text-align: center;
+    color: #333;
+}
+
+/* Heading */
+.signup-container h2 {
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #4E41FB 0%, #EABE6C 100%);
+    color: white;
+    padding: 20px;
+    font-weight: 600;
+}
+
+.order-heading {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Input Fields */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+    width: 93%;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Submit Button */
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #4E41FB 0%, #EABE6C 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #EABE6C 0%, #4E41FB 100%);
+}
+
+.back-btn {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    text-decoration: none;
+    background: #4E41FB;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #EABE6C;
+}
+
+/* Link */
+p {
+    margin-top: 10px;
+}
+
+p a {
+    color: #4E41FB;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+.stall-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.stall {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.stall:hover {
+    transform: translateY(-5px);
+}
+
+.logout {
+    display: block;
+    margin-top: 20px;
+    background-color: red;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.orders-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 10px;
+}
+
+.order-item {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.order-item:hover {
+    transform: translateY(-5px);
+}
+/* Order Status inside Cards */
+.order-status {
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    text-align: center;
+    min-width: 100px;
+    font-size: 14px;
+    color: #000;  /* Ensure text is visible */
+}
+
+/* Pending: Yellow */
+.status-pending {
+    background-color: #ffcc00;
+    color: #000 !important;
+}
+
+/* Preparing: Orange */
+.status-preparing {
+    background-color: #ff6600;
+    color: #fff !important;
+}
+
+/* Completed: Green */
+.status-completed {
+    background-color: #4caf50;
+    color: #fff !important;
+}
+
+/* Ensure Order Cards Show Status Colors Properly */
+.order-card {
+    background: #fff; 
+    color: #333; 
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, opacity 0.3s;
+    position: relative;
+}
+
+.order-card h3,
+.order-card p {
+    color: #333; 
+}
+
+
+
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.new-order {
+    animation: fadeIn 0.5s ease-out;
+}
+

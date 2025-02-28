@@ -1,0 +1,189 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4E41FB 0%, #EABE6C 100%);
+    color: #333;
+    margin: 0;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+}
+
+h1, h2 {
+    color: #222;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn {
+    display: block;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: 500;
+    background: linear-gradient(135deg, #4E41FB 0%, #EABE6C 100%);
+    color: white;
+    border-radius: 8px;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(78, 65, 251, 0.3);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #EABE6C 0%, #4E41FB 100%);
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #444;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #4E41FB;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #4E41FB 0%, #EABE6C 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #EABE6C 0%, #4E41FB 100%);
+}
+
+/* Back Button - Positioned to the left */
+.back-btn {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    text-decoration: none;
+    background: #4E41FB;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #EABE6C;
+}
+
+
+/* Default Light Mode */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333;
+    --primary-color: #4E41FB;
+    --secondary-color: #EABE6C;
+}
+
+/* Dark Mode */
+.dark-mode {
+    --bg-color: #181818;
+    --text-color: #f1f1f1;
+    --primary-color: #8a7ffb;
+    --secondary-color: #d1a55c;
+}
+
+/* Apply Variables */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.dark-mode-btn:hover {
+    color: var(--primary-color);
+}
+
+.view-details-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #4CAF50; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.view-details-btn:hover {
+    background-color: #45a049;
+}
+
+.signup-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    width: 380px;
+    text-align: center;
+    color: #333;
+}
+
+/* Heading */
+.signup-container h2 {
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #4E41FB 0%, #EABE6C 100%);
+    color: white;
+    padding: 20px;
+    font-weight: 600;
+}

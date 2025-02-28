@@ -1,0 +1,76 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #4E41FB, #EABE6C);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Container */
+.order-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Order Info */
+p {
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 6px;
+    margin: 10px 0;  /* Add margin to separate lines */
+    display: block;  /* Ensure they break into new lines */
+}
+
+/* Ordered Items */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    text-align: left;  /* Align list items properly */
+}
+
+ul li {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;  /* Ensure spacing between items */
+    font-size: 14px;
+    display: block; /* Ensure each item is on a new line */
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    text-decoration: none;
+    background: #4E41FB;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #EABE6C;
+}
