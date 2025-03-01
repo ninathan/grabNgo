@@ -29,12 +29,14 @@ foreach ($orders as $order) {
     }
 
     $html .= "
-        <div class='order-item'>
-            <p><strong>Order ID:</strong> " . htmlspecialchars($order['id']) . "</p>
-            <p><strong>Status:</strong> <span class='order-status $statusClass'>" . htmlspecialchars($order['status']) . "</span></p>
-            <p><strong>Total Price:</strong> ₱" . htmlspecialchars($order['total_price']) . "</p>
-            <p><strong>Order Time:</strong> " . htmlspecialchars($order['order_time']) . "</p>
-        </div>";
+        <a href='student_order_details.php?order_id=" . htmlspecialchars($order['id']) . "' class='order-link'>
+            <div class='order-item'>
+                <p><strong>Order ID:</strong> " . htmlspecialchars($order['id']) . "</p>
+                <p><strong>Status:</strong> <span class='order-status $statusClass'>" . htmlspecialchars($order['status']) . "</span></p>
+                <p><strong>Total Price:</strong> ₱" . htmlspecialchars($order['total_price']) . "</p>
+                <p><strong>Order Time:</strong> " . htmlspecialchars($order['order_time']) . "</p>
+            </div>
+        </a>";
 }
 
 echo json_encode(["status" => "success", "html" => $html]);

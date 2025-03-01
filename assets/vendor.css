@@ -74,3 +74,7 @@ ul li {
 .back-btn:hover {
     background: #EABE6C;
 }
+a .btn-1 {
+    text-decoration: none;
+    color: white;
+}

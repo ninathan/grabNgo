@@ -15,7 +15,7 @@
     <div class="orders-container"> 
         <h2 class="order-heading">Your Orders</h2>
         <div class="order-grid">
-            <!-- Orders will be dynamically loaded here -->
+            <!-- Orders will be loaded here -->
         </div>
     </div>
     

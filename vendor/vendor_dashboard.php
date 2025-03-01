@@ -335,25 +335,46 @@ input:checked + .slider:before {
 
     // Ensure sound plays after user interaction
 
+    $(document).ready(function () {
     let notificationSound = new Audio('../assets/notification.mp3');
+    let previousOrderCount = 0; // Store previous order count
 
-function checkNewOrders() {
-    $.get("check_new_orders.php", function (data) {
-        if (data > 0) {
-            $("#order-notification").text(data).show();
-            
-            // Play sound only if notification is updated
-            if ($("#order-notification").text() !== data.toString()) {
-                notificationSound.play().catch(error => console.log("Autoplay blocked:", error));
+    // Enable sound after user interaction (click, scroll, keypress)
+    function enableSound() {
+        notificationSound.play().then(() => {
+            notificationSound.pause(); // Pause immediately after playing once
+            notificationSound.currentTime = 0; // Reset
+        }).catch(error => console.log("Sound enable error:", error));
+
+        // Remove event listener after enabling
+        $(document).off("click keydown scroll", enableSound);
+    }
+
+    $(document).on("click keydown scroll", enableSound); // Listen for user interaction
+
+    function checkNewOrders() {
+        $.get("check_new_orders.php", function (data) {
+            let newOrderCount = parseInt(data, 10);
+
+            if (newOrderCount > 0) {
+                $("#order-notification").text(newOrderCount).show();
+
+                // Play sound ONLY if order count increased
+                if (newOrderCount > previousOrderCount) {
+                    notificationSound.currentTime = 0; // Reset audio position
+                    notificationSound.play().catch(error => console.log("Autoplay blocked:", error));
+                }
+            } else {
+                $("#order-notification").hide();
             }
-        } else {
-            $("#order-notification").hide();
-        }
-    });
-}
 
-// Run checkNewOrders every 5 seconds
-setInterval(checkNewOrders, 5000);
+            previousOrderCount = newOrderCount; // Update order count
+        });
+    }
+
+    // Check for new orders every 5 seconds
+    setInterval(checkNewOrders, 5000);
+});
 
     $(document).on("click", ".delete-item", function () {
         var itemId = $(this).data("id");

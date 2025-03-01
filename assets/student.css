@@ -209,6 +209,45 @@ p a:hover {
     color: #333; 
 }
 
+.order-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Ensures it takes the default text color */
+    display: block; /* Makes the whole div clickable */
+}
+
+.order-item {
+    background: rgba(255, 255, 255, 0.1);
+    color: white; /* Ensures text remains white */
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.2s ease-in-out, background 0.3s ease;
+}
+
+.order-item:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    background: rgba(255, 255, 255, 0.2); /* Subtle hover effect */
+}
+
+
+.back-btn-2 {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    text-decoration: none;
+    background: #4E41FB;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.back-btn-2:hover {
+    background: #EABE6C;
+}
+
 
 
 
