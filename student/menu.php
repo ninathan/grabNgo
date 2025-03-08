@@ -45,6 +45,13 @@ $stmt->close();
 
 
 </head>
+
+<script>
+setInterval(function() {
+    $.get("../keep_session_alive.php"); 
+}, 300000); 
+</script>
+
 <body>
     <nav class="navbar">
         <h2><?php echo htmlspecialchars($stall['name']); ?> Menu</h2>

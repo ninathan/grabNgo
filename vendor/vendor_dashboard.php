@@ -223,6 +223,14 @@ input:checked + .slider:before {
         }
     </style>
 </head>
+
+<script>
+setInterval(function() {
+    $.get("../keep_session_alive.php"); 
+}, 300000); 
+</script>
+
+
 <body>
     <div class="dashboard-container">
     

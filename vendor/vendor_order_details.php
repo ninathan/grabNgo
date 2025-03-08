@@ -36,6 +36,13 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="../assets/vendor.css">
     <script src="dark-mode.js"></script>
 </head>
+
+<script>
+setInterval(function() {
+    $.get("../keep_session_alive.php"); 
+}, 300000); 
+</script>
+
 <body>
     <div class="order-container">
         <h2>Order Details</h2>

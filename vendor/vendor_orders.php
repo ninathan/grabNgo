@@ -39,6 +39,13 @@ $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
 </head>
+
+<script>
+setInterval(function() {
+    $.get("../keep_session_alive.php"); 
+}, 300000); 
+</script>
+
 <body>
     <div class="container">
         <h2>Orders for Your Stall</h2>

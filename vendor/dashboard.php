@@ -20,6 +20,13 @@
 
 
     </head>
+
+    <script>
+setInterval(function() {
+    $.get("../keep_session_alive.php"); 
+}, 300000); 
+</script>
+
     <body>
         <div class="dashboard-container">
             <h2>Welcome, <?php echo $_SESSION["first_name"]; ?>!</h2>
